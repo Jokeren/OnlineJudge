@@ -32,7 +32,7 @@ static const int MIN = ~MAX;
 static const double EPS = 1e-7;
 static const int base = 10;
 
-char pre[N];
+char prev[N];
 char mid[N];
 
 class Bst{
@@ -90,10 +90,10 @@ public:
 
 
 	node* build_pre_mid(int s1, int e1, int s2, int e2){
-		node* n = create(pre[s1]);
+		node* n = create(prev[s1]);
 		int index;
 		for (int i = s2; i <= e2; i++){
-			if (mid[i] == pre[s1]){
+			if (mid[i] == prev[s1]){
 				index = i;
 				break;
 			}
@@ -154,10 +154,10 @@ int main()
 	FOUTPUT("out.txt");
 
 	
-	while (scanf("%s ", pre) != EOF) {
+	while (scanf("%s ", prev) != EOF) {
 		scanf("%s ", mid);
 		Bst bst;
-		bst.build_pre_mid(0, strlen(pre) - 1, 0, strlen(mid) - 1);
+		bst.build_pre_mid(0, strlen(prev) - 1, 0, strlen(mid) - 1);
 		bst.post_order(bst.get_root());
 		printf("\n");
 	}

@@ -1,3 +1,7 @@
+/*
+ * 求出以t为根节点的子树中的‘最长路’以及与‘最长路’不重合的‘次长路’，用这两条路的长度之和去更新答案
+ * first 和 second随高度增加
+ */
 #define _USE_MATH_DEFINES
 
 #ifdef ONLINE_JUDGE

@@ -1,3 +1,8 @@
+/*
+ * 以两行为单位扫描，需要枚举情况
+ * 考虑插头dp？
+ * TODO:<<基于连通性状态压缩的动态规划问题>>
+ */
 #define _USE_MATH_DEFINES
 
 #ifdef ONLINE_JUDGE
